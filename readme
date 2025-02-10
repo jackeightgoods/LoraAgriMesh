@@ -1,1 +1,57 @@
-test
+# 🌿 Progetto LoRaGriMesh - Monitoraggio Agricolo con LoRaWAN
+
+## 📌 Descrizione del Progetto
+
+LoRaGriMesh è un sistema di monitoraggio agricolo basato sulla tecnologia **LoRaWAN**, progettato per raccogliere dati ambientali e agronomici tramite una rete di sensori a **basso consumo energetico** alimentati da **pannelli solari**. 
+
+L'obiettivo del progetto è fornire agli agricoltori dati in tempo reale per ottimizzare l'irrigazione, prevenire problemi legati alle condizioni climatiche e migliorare la gestione delle colture.
+
+## 🔗 Come Funziona?
+
+1. **Stazioni di Monitoraggio** → Sensori distribuiti nel campo raccolgono dati su temperatura, umidità del suolo, pioggia, ecc.
+2. **Comunicazione via LoRa** → I dati vengono inviati a un gateway LoRa tramite la tecnologia a lunga distanza (LoRaWAN).
+3. **Gateway LoRa** → Il gateway riceve i dati dai sensori e li inoltra a un server cloud.
+4. **Elaborazione e Visualizzazione** → I dati vengono analizzati e visualizzati su dashboard come **Grafana**, permettendo agli agricoltori di prendere decisioni informate.
+
+## 🛠 Componenti del Sistema
+
+### 1️⃣ **Nodo Sensore** (ESP32 + LoRa)
+- Microcontrollore: **ESP32** o **ESP8266**
+- Modulo LoRa: **SX1276/SX1278**
+- Sensori supportati:
+  - **DHT22** (Temperatura e Umidità)
+  - **Sensore di umidità del suolo**
+  - **Sensore di pioggia**
+  - **Luminosità e Radiazione solare**
+- Alimentazione: **Pannello solare + Batteria LiPo**
+
+### 2️⃣ **Gateway LoRa**
+- Dispositivo: **Raspberry Pi + Modulo LoRa (RAK831, RAK2245, ecc.)**
+- Software: **The Things Network (TTN) / ChirpStack**
+- Connessione: **Ethernet / WiFi / 4G**
+
+### 3️⃣ **Server Cloud & Dashboard**
+- Database: **InfluxDB / PostgreSQL**
+- Visualizzazione: **Grafana**
+- Notifiche: **Telegram / Email / SMS**
+
+## ⚡️ Vantaggi di LoRaWAN per l'Agricoltura
+✅ **Basso consumo energetico** (ideale per alimentazione solare)  
+✅ **Ampia copertura** (fino a 15 km in campo aperto)  
+✅ **Costi ridotti** rispetto ad altre tecnologie wireless  
+✅ **Reti private e scalabili**
+
+## 🚀 Come Iniziare
+1. **Assemblare un nodo sensore** con ESP32 e modulo LoRa.
+2. **Configurare un gateway LoRa** e connetterlo a un server LoRaWAN (es. TTN o ChirpStack).
+3. **Impostare il server e database** per raccogliere i dati.
+4. **Creare dashboard su Grafana** per visualizzare i dati in tempo reale.
+
+## 📜 Licenza
+Questo progetto è **open-source** sotto licenza MIT. Chiunque può contribuire e migliorarlo!
+
+---
+📩 **Contatti & Collaborazioni**  
+Se vuoi partecipare allo sviluppo, segui il repository o contattaci!
+
+
